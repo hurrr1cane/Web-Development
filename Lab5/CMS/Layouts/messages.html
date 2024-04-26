@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Students organization resource" />
+    <meta name="keywords" content="Student, CMS, VNS" />
+    <meta name="author" content="Maksym Horak" />
+    <title>CMS-LPNU</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../Styles/main.css" />
+    <link rel="stylesheet" href="../Styles/messages.css" />
+    <link rel="manifest" href="../JSON/manifest.json" />
+  </head>
+  <body>
+    <header>
+      <!-- A text, a notification and photo with name -->
+      <div class="header">
+        <div class="header-burger">
+          <img src="../Pictures/icons8-menu-24.png" alt="Burger" />
+        </div>
+        <div class="header-text">
+          <a href="index.html">
+            <p>CMS-LPNU</p>
+          </a>
+        </div>
+
+        <div class="header-account">
+          <img
+            class="header-account-photo"
+            src="../Pictures/default-image.png"
+            alt="Your picture"
+          />
+          <p class="header-account-text"></p>
+
+          <div class="account-control-container">
+            <div class="single-account-control" id="profile-button">
+              <p>Profile</p>
+            </div>
+            <div class="single-account-control" id="logout-button">
+              <p>Logout</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-container">
+      <div class="containerer">
+        <nav>
+          <!-- Navigation options -->
+          <ul class="navigation-list">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="index.html">Students</a></li>
+            <li><a href="#">Tasks</a></li>
+          </ul>
+        </nav>
+
+        <main class="container">
+          <div class="chats-container">
+            <h3>Chats</h3>
+            <div class="search">
+              <input type="text" placeholder="Enter email" id="email-to-add" />
+              <button id="add-room">Add</button>
+            </div>
+            <p class="error-message" id="incorrect-email">
+              Please, enter a correct email
+            </p>
+
+            <div class="chats-list"></div>
+          </div>
+          <div class="conversation hide">
+            <h3>Conversation</h3>
+            <div class="group-chat">
+              <div class="participants"></div>
+              <div class="add-participant">
+                <button class="plus-button">+</button>
+                <div class="input-container hide" id="add-participant-input-container">
+                  <input type="text" placeholder="Enter email" id="add-participant-input"/>
+                  <button class="add-participant-button">Add</button>
+                </div>
+                <p class="error-message hide" id="add-participant-message">
+                  Please, enter a correct email
+                </p>
+              </div>
+            </div>
+            <div class="messages-container"></div>
+            <div class="message-input">
+              <input
+                type="text"
+                placeholder="Enter message"
+                id="message-field"
+              />
+              <button id="send-button">Send</button>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <footer>
+        <div class="footer-container">
+          <div class="footer-info">
+            <p>&copy; 2024 LPNU CMS. All rights reserved.</p>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+          <div class="footer-contact">
+            <p>Ukraine, Lviv, Bandery St., 12</p>
+            <p><a href="mailto:info@lpnu-cms.com">info@lpnu-cms.com</a></p>
+          </div>
+          <div class="footer-developed-by">
+            <p>Developed by: Maksym Horak</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="../Scripts/globalVariable.js"></script>
+  <script src="../Scripts/general.js"></script>
+  <script src="https://cdn.socket.io/4.3.2/socket.io.min.js"></script>
+  <script src="../Scripts/messages.js"></script>
+</html>

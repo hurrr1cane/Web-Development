@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login & Registration Form</title>
+
+    <link rel="stylesheet" href="../Styles/auth.css" />
+  </head>
+  <body>
+    <header>
+      <!-- A text, a notification and photo with name -->
+      <div class="header">
+        <div class="header-back">
+          <a href="index.html">
+            <img src="../Pictures/icons8-back-48.png" alt="Back" />
+          </a>
+        </div>
+        <div class="header-text">
+          <a href="index.html">
+            <p>CMS-LPNU</p>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <input type="checkbox" id="check" />
+        <div class="login form">
+          <header>Login</header>
+          <form action="#">
+            <div class="input-container">
+              <label for="email-login">Email</label>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                id="email-login"
+              />
+              <small class="error-message"></small>
+            </div>
+            <div class="input-container">
+              <label for="password-login">Password</label>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                id="password-login"
+              />
+              <small class="error-message"></small>
+            </div>
+            <input type="button" class="button" value="Login" />
+          </form>
+          <div class="signup">
+            <span class="signup"
+              >Don't have an account?
+              <label for="check">Signup</label>
+            </span>
+          </div>
+        </div>
+        <div class="registration form">
+          <header>Signup</header>
+          <form action="#">
+            <div class="input-container">
+              <label for="name">Name</label>
+              <input type="text" placeholder="Enter your name" id="name" />
+              <small class="error-message"></small>
+              <!-- Error message for name -->
+            </div>
+
+            <div class="input-container">
+              <label for="surname">Surname</label>
+              <input
+                type="text"
+                placeholder="Enter your surname"
+                id="surname"
+              />
+              <small class="error-message"></small>
+              <!-- Error message for surname -->
+            </div>
+
+            <div class="input-container">
+              <label for="sex">Sex</label>
+              <select id="sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+              <small class="error-message"></small>
+              <!-- Error message for sex -->
+            </div>
+
+            <div class="input-container">
+              <label for="date">Birthdate</label>
+              <input type="date" placeholder="Enter your birthdate" id="date" />
+              <small class="error-message"></small>
+              <!-- Error message for birthdate -->
+            </div>
+
+            <div class="input-container">
+              <label for="email">Email</label>
+              <input type="email" placeholder="Enter your email" id="email" />
+              <small class="error-message"></small>
+              <!-- Error message for email -->
+            </div>
+
+            <div class="input-container">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                placeholder="Create a password"
+                id="password"
+              />
+              <small class="error-message"></small>
+              <!-- Error message for password -->
+            </div>
+
+            <div class="input-container">
+              <label for="confirm">Confirm password</label>
+              <input
+                type="password"
+                placeholder="Confirm your password"
+                id="confirm"
+              />
+              <small class="error-message"></small>
+              <!-- Error message for password confirmation -->
+            </div>
+
+            <input type="button" class="button" value="Signup" />
+          </form>
+          <div class="signup">
+            <span class="signup"
+              >Already have an account?
+              <label for="check">Login</label>
+            </span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../Scripts/globalVariable.js"></script>
+    <script src="../Scripts/auth.js"></script>
+  </body>
+</html>

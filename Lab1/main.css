@@ -1,0 +1,560 @@
+body {
+  margin: 0;
+  font-family: Ubuntu, sans-serif;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(250, 60, 60);
+  align-items: center;
+  height: 60px;
+  color: white;
+}
+
+.header-burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  width: 34px;
+  height: 34px;
+  background-position: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header-burger:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header-text {
+  flex: 1;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.header-text a {
+  text-decoration: none;
+  color: white;
+}
+
+.header-notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 10px;
+  width: 34px;
+  height: 34px;
+  background-position: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header-notification:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.notification-indicator {
+  background-color: rgb(250, 210, 210);
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  animation: notification-indicator-animation 1s infinite;
+}
+
+@keyframes notification-indicator-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.notifications-container {
+  display: none;
+  width: 300px;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 6px;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.single-notification p {
+  margin: 0;
+}
+
+.single-notification {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: rgb(250, 210, 210);
+  margin: 4px;
+  padding: 8px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.notification-photo {
+  margin: 0px 10px 0 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: white;
+  object-fit: cover;
+}
+
+.notification-text {
+  flex: 1;
+  color: rgb(60, 60, 60);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.notification-text-name {
+  font-weight: 500;
+}
+
+.notification-text-content {
+  font-size: 14px;
+  color: rgb(60, 60, 60);
+}
+
+
+.header-account {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: 20px;
+  background-position: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header-account:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header-account-photo {
+  margin: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: white;
+  object-fit: cover;
+}
+
+.header-account-text {
+  margin-right: 12px;
+}
+
+.account-control-container {
+  display: none;
+  width: 80%;
+  min-width: 60px;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 6px;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.account-control-container p {
+  margin: 0;
+}
+
+.single-account-control {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  margin: 4px;
+  padding: 8px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.single-account-control:hover {
+  background-color: rgb(250, 210, 210);
+}
+
+.main-container {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  display: none;
+  width: 250px;
+  height: 100%;
+  background-color: rgb(250, 210, 210);
+  padding-top: 20px;
+}
+
+nav.active {
+  display: block;
+  width: 250px;
+}
+
+
+
+.navigation-list {
+  list-style: none;
+  padding: 0;
+  padding-right: 20px;
+}
+
+.navigation-list a {
+  text-decoration: none;
+  color: black;
+}
+
+.navigation-list li {
+  font-size: 18px;
+  padding: 10px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.navigation-selected-option {
+  background-color: rgb(250, 60, 60);
+  color: white;
+  padding: 10px;
+  border-radius: 0 20px 20px 0;
+}
+
+.navigation-selected-option a {
+  color: white;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(250, 210, 210);
+  padding: 20px;
+  border-radius: 20px;
+  /*overflow-x: scroll;*/
+}
+
+.table-add-student {
+  align-self: flex-end;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 37px;
+  font-size: 30px;
+  background-color: rgb(250, 60, 60);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.students-table td {
+  padding: 5px;
+  text-align: center;
+  justify-content: center;
+}
+
+.students-table input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.students-table input[type="checkbox"]:checked {
+  background-color: rgb(250, 60, 60);
+}
+
+.status-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.status-active {
+  background-color: rgb(250, 60, 60);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status-inactive {
+  background-color: rgb(60, 60, 60);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.student-options-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.student-options-container img {
+  width: 20px;
+  height: 20px;
+}
+
+.student-options-edit {
+  width: 30px;
+  height: 30px;
+  margin: 1px;
+  background-color: rgb(250, 60, 60);
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.student-options-delete {
+  width: 30px;
+  height: 30px;
+  margin: 1px;
+  background-color: rgb(250, 60, 60);
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.pagination a {
+  margin: 2px;
+  color: black;
+  float: left;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.pagination a.pagination-active {
+  background-color: rgb(250, 60, 60);
+  color: white;
+}
+
+.pagination a:hover:not(.pagination-active) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+  background-color: rgb(250, 210, 210);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1024px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.footer-info,
+.footer-contact,
+.footer-developed-by {
+  text-align: left;
+}
+
+.footer-info a,
+.footer-contact a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 10px;
+}
+
+.footer-info a:hover,
+.footer-contact a:hover {
+  color: rgb(250, 60, 60);
+}
+
+.footer-developed-by p {
+  font-size: 0.8em;
+  margin-bottom: 0;
+}
+
+.student-dialog {
+  position: fixed;
+  background-color: rgb(250, 210, 210);
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.student-dialog-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.student-dialog-form div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+}
+
+.student-dialog-form div label {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.student-dialog-form div input,
+.student-dialog-form div select {
+  flex: 1;
+  padding: 8px 10px;
+  background-color: white;
+  border: none;
+  border-radius: 100px;
+  font-size: 15px;
+}
+
+.student-dialog-button-container,
+.delete-student-dialog-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+.student-dialog-save,
+.delete-student-dialog-button-container button {
+  background-color: rgb(250, 60, 60);
+  color: white;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.student-dialog-close-button,
+.delete-student-dialog-close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: rgb(250, 60, 60);
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.student-dialog-close-button:hover,
+.student-dialog-save:hover,
+.student-options-edit:hover,
+.student-options-delete:hover,
+.table-add-student:hover,
+.delete-student-dialog-button-container button:hover,
+.delete-student-dialog-close-button:hover {
+  background-color: rgb(120, 34, 34);
+}
+
+.close-image {
+  width: 20px;
+  height: 20px;
+}
+
+.delete-student-dialog {
+  position: fixed;
+  background-color: rgb(250, 210, 210);
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 600px) {
+
+  
+  .header-account-text {
+    display: none;
+  }
+
+  nav {
+    display: none;  
+  }
+
+  table {
+    display: block;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin: 0 auto;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

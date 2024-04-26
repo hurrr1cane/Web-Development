@@ -1,0 +1,114 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(250, 210, 210);
+  padding: 2rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.profile-photo img {
+  margin: 0.625rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: white;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.profile-info-edit {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0.5rem;
+}
+
+.profile-info-edit button,
+.profile-info-edit input[type="submit"] {
+  background-color: rgb(250, 60, 60);
+  color: white;
+  border: none;
+  height: 2.25rem;
+  margin-left: 0.625rem;
+  padding: 0 1rem;
+  border-radius: 6.25rem;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+/* Set style for input field, select field. Input type date and input type file*/
+
+input[type="text"],
+input[type="date"],
+select {
+  flex: 1;
+  min-width: 0;
+  margin: 0.5rem;
+  padding: 0.5rem 0.625rem;
+  background-color: white;
+  border: none;
+  border-radius: 6.25rem;
+  font-size: 0.9375rem;
+}
+
+/* Set style for input file*/
+
+input[type="file"] {
+  flex: 1;
+  min-width: 0;
+  margin: 0.5rem;
+  padding: 0.5rem 0.625rem;
+  background-color: white;
+  border: none;
+  border-radius: 6.25rem;
+  font-size: 0.9375rem;
+  width: 90%;
+}
+
+/*Also for the button inside the input type=file*/
+input[type="file"]::file-selector-button {
+  background-color: rgb(250, 60, 60);
+  color: white;
+  border: none;
+  height: 2.25rem;
+  margin-left: 0.625rem;
+  padding: 0 1rem;
+  border-radius: 6.25rem;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+.server-error-dialog,
+.validation-error-dialog {
+  position: fixed;
+  background-color: rgb(250, 210, 210);
+  border-radius: 1.25rem;
+  border: none;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
+}
+
+.server-error-dialog-button-container,
+.validation-error-dialog-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0.625rem;
+}
+
+.server-error-dialog-button-container button,
+.validation-error-dialog-button-container button {
+  background-color: rgb(250, 60, 60);
+  color: white;
+  margin-left: 0.625rem;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 6.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.server-error-dialog-button-container button:hover,
+.validation-error-dialog-button-container button:hover {
+  background-color: rgb(120, 34, 34);
+}

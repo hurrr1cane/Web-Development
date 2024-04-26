@@ -1,0 +1,63 @@
+{
+  "name": "CMS",
+  "short_name": "CMS",
+  "description": "CMS",
+  "display": "standalone",
+  "orientation": "landscape",
+  "scope": ".",
+  "start_url": ".",
+  "prefer_related_applications": true,
+  "screenshots": [
+    {
+      "src": "../Pictures/Desktop.webp",
+      "sizes": "1830x917",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Students"
+    },
+    {
+      "src": "../Pictures/Mobile.webp",
+      "sizes": "400x807",
+      "type": "image/webp",
+      "label": "Students"
+    }
+  ],
+  "icons": [
+    {
+      "src": "../Pictures/icons8-close-30.png",
+      "sizes": "30x30",
+      "type": "image/png"
+    },
+    {
+      "src": "../Pictures/icons8-delete-30.png",
+      "sizes": "30x30",
+      "type": "image/png"
+    },
+    {
+      "src": "../Pictures/icons8-doorbell-24.png",
+      "sizes": "24x24",
+      "type": "image/png"
+    },
+    {
+      "src": "../Pictures/icons8-edit-24.png",
+      "sizes": "24x24",
+      "type": "image/png"
+    },
+    {
+      "src": "../Pictures/icons8-menu-24.png",
+      "sizes": "24x24",
+      "type": "image/png"
+    },
+    {
+      "src": "../Pictures/your-picture.png",
+      "sizes": "606x622",
+      "type": "image/png"
+    },
+    {
+      "src": "../Pictures/graduated.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
