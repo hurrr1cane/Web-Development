@@ -9,7 +9,6 @@ Welcome to the Course Management System! This project is a comprehensive web-bas
 - **User Authorization**: Secure login and authorization using JWT tokens.
 - **Student Management**: Authorized users can manage the list of students.
 - **Messaging System**: Authorized users can send messages to other users.
-- **Group Management**: Users can create and manage groups with multiple users.
 
 ## Technologies Used
 
