@@ -43,7 +43,7 @@ Contributions are welcome! If you have suggestions or improvements, please creat
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the Mozilla License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
